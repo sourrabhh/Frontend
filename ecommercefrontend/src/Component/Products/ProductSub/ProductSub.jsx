@@ -1,5 +1,5 @@
 import "./ProductSub.scss";
-import earphone from "../../../../assets/earphone.png";
+import earphone from "../../../assets/earphone.png";
 
 const ProductSub = () => {
     return(
