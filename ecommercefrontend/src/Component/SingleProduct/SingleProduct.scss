@@ -100,6 +100,51 @@
                             }
                         }
                     }
+                    // Add To Cart Button CSS 
+                    .add-to-cart-button{
+                        outline: 0;
+                        border: 0;
+                        height: 50px;
+                        width: 180px;
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        cursor: pointer;
+                        font-size: 16px;
+                        color: white;
+                        background-color: #2277dd;
+                        border-bottom: 3px solid #2277dd;
+                        flex-grow: 1;
+                        @include md{
+                            flex-grow: unset;
+                        }
+                    }
+                }
+                .divider{
+                    margin: 20px 0;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgba(0,0,0,0.1);
+                }
+
+                .info-item{
+                    .text-bold{
+                        font-size: 18px;
+                        font-weight: 500;
+                        display: block;
+                        &:nth-child(1){
+                            margin-bottom: 20px;
+                        }
+                        span{
+                            font-size: 16px;
+                            font-weight: 400;
+                            cursor: pointer;
+                            color: #6b6b6b;
+                        }
+                        svg{
+                            margin: 0 5px;
+                        }
+                    }
                 }
             }
         }
