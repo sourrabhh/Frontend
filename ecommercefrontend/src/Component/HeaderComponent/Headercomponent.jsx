@@ -1,15 +1,18 @@
 import "./Headercomponent.scss"
-import {TbSearch} from "react-icons/tb"
+import {BiSearch} from "react-icons/bi"
+// import {TbSearch} from "react-icons/tb"
 import {AiOutlineHeart} from "react-icons/ai"
 import {CgShoppingCart} from "react-icons/cg"
 import {useEffect, useState} from "react"
 import Cart from "../Cart/Cart";
+// import Search from "./Search/Search";
 // import {useNavigate} from "react-router-dom"
 
 const Headercomponent = () => { 
 
     const [scrolled, setScrolled] = useState(false);
     const [showcart, setShowcart] = useState(false);
+    // const [showSearch, setShowSearch] = useState(false);
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -35,8 +38,14 @@ const Headercomponent = () => {
                     </ul>
                     <div className="center">e-दुकान</div>
 
+    
+
                     <div className="right">
-                        <TbSearch />
+                        {/* <TbSearch onClick={ () => setShowSearch(true) }/> */}
+                        <div className="header-search">
+                            <input type="text" className="header-search-input" />
+                            <BiSearch className="header-search-icon" />
+                        </div>
                         <AiOutlineHeart />
                         <span className="cart-icon" onClick={() => setShowcart(true)}>
                             <CgShoppingCart />
@@ -47,6 +56,7 @@ const Headercomponent = () => {
         </header>
 
         {showcart && <Cart setShowcart = {setShowcart} />}
+        {/* { showSearch && <Search setShowSearch = {setShowSearch} />} */}
     </>
     )    
 }
